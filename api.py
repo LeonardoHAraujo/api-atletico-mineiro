@@ -36,22 +36,22 @@ def index():
         teams = gm.find_all('span', {'class': 'd-flex d-flex__align-baseline'})
         x = gm.find('span', {'class': 'f-14 pl-10 pr-10'}).text
         label = gm.find('h4', {'class': 'f-12 gray-50'}).text
-        
+
         team1_name = teams[0].find('label', {'class': 'f-14 gray-42 txt-uppercase pl-10'}).text
         team1_img = teams[0].find('img', {'class': 'shield shield--small'})['src']
-        
+
         if gm.find('label', {'class': 'd-flex gray-42 f-16 txt-uppercase pl-10'}) != None:
             result_team1 = gm.find('label', {'class': 'd-flex gray-42 f-16 txt-uppercase pl-10'}).text
-        
+
         else:
             result_team1 = ''
 
         team2_name = teams[1].find('label', {'class': 'f-14 gray-42 txt-uppercase pr-10'}).text
         team2_img = teams[1].find('img', {'class': 'shield shield--small'})['src']
-        
+
         if gm.find('label', {'class': 'd-flex gray-42 f-16 txt-uppercase pr-10'}) != None:
             result_team2 = gm.find('label', {'class': 'd-flex gray-42 f-16 txt-uppercase pr-10'}).text
-        
+
         else:
             result_team2 = ''
 
@@ -97,3 +97,4 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+
