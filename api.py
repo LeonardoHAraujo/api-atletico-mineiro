@@ -14,7 +14,7 @@ def index():
 
     # Requests and Soups
     req = requests.get('https://www.mg.superesportes.com.br/futebol/atletico-mg/')
-    res_g4 = requests.get('https://www.mg.superesportes.com.br/campeonatos/2021/brasileirao/serie-a/')
+    res_g4 = requests.get('https://www.mg.superesportes.com.br/campeonatos/2022/brasileirao/serie-a/')
     soup = BeautifulSoup(req.content, 'html.parser')
     soup_g4 = BeautifulSoup(res_g4.content, 'html.parser')
 
