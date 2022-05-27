@@ -1,11 +1,11 @@
-<p>Título: API-Crawler informações do Atlético mineiro</p>
+# API-Crawler to get info of Atlético mineiro
 
-<p>Autor: Leonardo Araújo</p>
+*Powered by Leonardo Araújo*
 
-<p>A API foi criada com python utilizando Flask e Bs4, para servir um app mobile.</p>
+The API was created with python using Flask and Bs4, to serve a mobile app.
 
-<p>A API funciona da seguinte maneira:</p>
+## The API works follow
 
-    A API é composta por uma única rota que é responsável pelo
-    seu principal funcionamento. Ao acessar, ela retorna os próximos jogos, os ultimos jogos
-    e a tabela atualizada do Brasileirão.
+    The API is composed of a single route that is responsible for the
+    its main function. When accessing, it returns the next games, the last games
+    and the updated table of the Brazilian.
