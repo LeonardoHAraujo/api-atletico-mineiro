@@ -1,6 +1,7 @@
 import json
 import requests
 from flask import Flask
+from datetime import date
 from flask_cors import CORS
 from bs4 import BeautifulSoup
 
@@ -14,7 +15,7 @@ def index():
 
     # Requests and Soups
     req = requests.get('https://www.mg.superesportes.com.br/futebol/atletico-mg/')
-    res_g4 = requests.get('https://www.mg.superesportes.com.br/campeonatos/2022/brasileirao/serie-a/')
+    res_g4 = requests.get(f'https://www.mg.superesportes.com.br/campeonatos/{date.today().year}/brasileirao/serie-a/')
     soup = BeautifulSoup(req.content, 'html.parser')
     soup_g4 = BeautifulSoup(res_g4.content, 'html.parser')
 
@@ -75,7 +76,6 @@ def index():
 
     # table
     table = soup_g4.find('table', {'class': 'table table-cup table-striped margin-bottom-25'})
-    tbody = table.find('tbody')
     trs = table.find_all('tr')
 
     del trs[0]
